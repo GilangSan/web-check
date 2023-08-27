@@ -16,7 +16,7 @@ def ipcheck(url):
 
 def source(url):
   os.system("clear")
-  page = requests.get("https://check-host.net/ip-info?host="+url)
+  page = requests.get(url)
   soup = BeautifulSoup(page.text)
   print(soup)
   input("Enter To Back")

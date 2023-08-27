@@ -4,7 +4,8 @@ from bs4 import BeautifulSoup
 
 def ipcheck(url):
   os.system("clear")
-  page = requests.get("https://check-host.net/ip-info?host="+url)                                                                                        soup = BeautifulSoup(page.text, 'html.parser')
+  page = requests.get("https://check-host.net/ip-info?host="+url)
+  soup = BeautifulSoup(page.text, 'html.parser')
   my = soup.findAll('strong')[1]
   mys = soup.find('td').findAll('td')[4]
   host = mys.get_text()
@@ -14,7 +15,8 @@ def ipcheck(url):
   input("Enter To Back")
 
 def source(url):
-  os.system("clear")                                                                                                                                     page = requests.get("https://check-host.net/ip-info?host="+url)
+  os.system("clear")
+  page = requests.get("https://check-host.net/ip-info?host="+url)
   soup = BeautifulSoup(page.text)
   print(soup)
   input("Enter To Back")
